@@ -1,5 +1,7 @@
 {
-  "name": "ionic-firebase-authentication",
-  "integrations": {},
+  "name": "ionic4-firebase-authentication",
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

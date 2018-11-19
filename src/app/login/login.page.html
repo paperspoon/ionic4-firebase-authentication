@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar> <ion-title>login</ion-title> </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <ion-label floating>Email</ion-label>
+      <ion-input type="email" [(ngModel)]="form.email"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Password</ion-label>
+      <ion-input type="password" [(ngModel)]="form.password"></ion-input>
+    </ion-item>
+  </ion-list>
+  <ion-button block (click)="signInWith('email')">Sign In</ion-button>
+  <ion-button block (click)="signInWith('google')">Google</ion-button>
+  <ion-button block (click)="signInWith('facebook')">Facebook</ion-button>
+  <ion-button block (click)="signUpWithEmail()">Sign Up</ion-button>
+  <ion-button block (click)="signOut()">Sign Out</ion-button>
+  <h1>User</h1>
+  <pre>{{ auth.user | async | json }}</pre>
+  <h1>Error</h1>
+  <pre>{{ error | json }}</pre>
+</ion-content>
